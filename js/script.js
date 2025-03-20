@@ -98,3 +98,25 @@ var swiper = new Swiper(".logo-slider", {
       },
    },
 });
+
+
+(function(){
+   emailjs.init("jweaLK3M2Zoq_ymkv"); // Replace with your actual User ID
+ })();
+
+ document.getElementById("contact-form").addEventListener("submit", function(event) {
+   event.preventDefault(); // Prevent default form submission
+
+   emailjs.send("service_3tli473", "template_hzgrfzn", {
+     name: document.getElementById("name").value,
+     email: document.getElementById("email").value,
+     phone: document.getElementById("phone").value,
+     message: document.getElementById("message").value
+   })
+   .then(function(response) {
+     alert("Message sent successfully!");
+     document.getElementById("contact-form").reset();
+   }, function(error) {
+     alert("Failed to send message. Try again!");
+   });
+ });

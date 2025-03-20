@@ -503,16 +503,16 @@
           loading="lazy"
         ></iframe>
 
-        <form action="">
+        <form action="" id="contact-form">
           <h3>get in touch</h3>
-          <input type="text" placeholder="name" class="box" />
-          <input type="email" placeholder="email" class="box" />
-          <input type="number" placeholder="phone" class="box" />
+          <input type="text" placeholder="name" id="name" class="box" />
+          <input type="email" placeholder="email" id="email" class="box" />
+          <input type="number" placeholder="phone" id="phone" class="box" />
           <textarea
             name=""
             placeholder="message"
             class="box"
-            id=""
+            id="message"
             cols="30"
             rows="10"
           ></textarea>
@@ -548,6 +548,7 @@
     <!-- footer section ends -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
